@@ -1,0 +1,105 @@
+
+<style>
+   
+    .bigicon {
+        font-size:57px;
+        color:white;
+    }
+
+    .panel{
+        border-radius:0;        
+    }
+
+    .stats-item{        
+        padding:10px;     
+        min-height:77px;   
+
+    }
+
+    .header-item{
+        font-size:17px;
+        color:white;
+    }
+
+    .data-item {
+        font-size: 19px;
+        color: white;
+    }
+</style>
+
+<div class="container">
+    <br />
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div id="chart1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- you need to include the shieldui css and js assets in order for the charts to work -->
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        // a function to generate some random data
+        function getRandomArray(length, min, max) {
+            var array = [];
+            for (var i = 0; i < length; i++) {
+                array.push(Math.floor(Math.random() * (max - min + 1)) + min);
+            }
+            return array;
+        }
+        // init the main chart
+        $("#chart1").shieldChart({
+            theme: "light",
+            exportOptions: {
+                image: false,
+                print: false
+            },
+            primaryHeader: {
+                text: "Performance Data"
+            },
+            axisX: {
+                drawColor: 'white',
+                ticksColor: 'white',
+                axisTickText: {
+                    enabled: false
+                }
+            },
+            axisY: {
+                drawColor: 'white',
+                ticksColor: 'white',
+                plotStripWidth: 0,
+                axisTickText: {
+                    enabled: false
+                }
+            },
+            tooltipSettings: {
+                axisMarkers: {
+                    enabled: true,
+                    mode: 'x',
+                    width: 2,
+                    zIndex: 3,
+                    drawColor: "grey"
+                }
+            },
+            dataSeries: [
+                {
+                    seriesType: 'splinearea',
+                    collectionAlias: 'Target',
+                    data: getRandomArray(20, 30, 100),
+                    color: '#F0DD2F'
+                },
+                {
+                    seriesType: 'splinearea',
+                    collectionAlias: 'Achieved',
+                    data: getRandomArray(20, 15, 50),
+                    color: '#E4E4E4'
+                }
+            ]
+        });
+    });
+</script>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/custom-styles.css"> 
+    <link rel="stylesheet" href="styles/buddyselfi.css"> 
+    <!-- endbuild -->
+    <!-- genearl css -->
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+ <!--    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/shieldui-all.min.css" />
+ <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" /> -->
+
+    <!-- end genearl css -->
+  </head>
+  <body ng-app="bestbuddyApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="header">
+   <ng-include src="'components/navbar.html'" scope="" onload=""></ng-include>
+    </div>
+    <div class="paddingleft">
+    <div data-ng-view="" id="div-view" class="view-slide-in">
+    </div>
+    </div>
+     <footer class="text-center" id="hideFooter">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>KNVS Prasad<br>Heaven</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About Best Buddy</h3>
+                        <p>Best Buddy is all for Us</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Best Buddy@<strong>Kiss Production 2015</strong
+                    </div>
+                </div>
+            </div>
+        </div>
+     </footer>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-css/angular-css.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-ui-sortable/sortable.js"></script>
+    <script src="bower_components/angular-ui-scroll/dist/ui-scroll.js"></script>
+    <script src="bower_components/angular-ui-scrollpoint/dist/scrollpoint.js"></script>
+    <script src="bower_components/angular-ui-event/dist/event.js"></script>
+    <script src="bower_components/angular-ui-mask/dist/mask.js"></script>
+    <script src="bower_components/angular-ui-validate/dist/validate.js"></script>
+    <script src="bower_components/angular-ui-indeterminate/dist/indeterminate.js"></script>
+    <script src="bower_components/angular-ui-uploader/dist/uploader.js"></script>
+    <script src="bower_components/angular-ui-utils/index.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/bootstrap-rating-input/build/bootstrap-rating-input.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="components/filter.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/services/databaseservice.js"></script>
+        <script src="scripts/controllers/registartion.js"></script>
+        <script src="scripts/controllers/album.js"></script>
+        <script src="scripts/controllers/performance.js"></script>
+        <script src="scripts/controllers/timeline.js"></script>
+        <script src="scripts/controllers/tilesalbum.js"></script>
+        <script src="scripts/controllers/feedback.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<style>
+img {
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    -webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);
+    margin-bottom: 20px;
+}
+img:hover {
+    filter: none; /* IE6-9 */
+    -webkit-filter: grayscale(0); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+.style_featured{
+    padding: 20px 0;
+    text-align: center;
+}
+.style_featured > div > div{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.style_featured > div:hover > div{
+    margin-top: +19px;
+    border: 1px solid rgb(153, 200, 250);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 9px 9px 9px;
+    background: rgba(153, 200, 250, 0.1);
+    transition: 0.99s;
+}
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="text-center">
+            <h1>Bst Buddy Album</h1>
+        </div>
+        <div class="row style_featured" ui-sortable>
+            <div class="col-md-4" ng-repeat="img in data.data">
+                <div class="well">
+                    <img class="thumbnail img-responsive" alt="Bootstrap template" src="{{img.data.picture}}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
